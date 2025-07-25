@@ -25,6 +25,7 @@
 }
 
 body {
+    background-image: url(office.jpg);
     font-family: 'Roboto', sans-serif;
     background: var(--light-bg);
     color: var(--dark-text);
@@ -127,6 +128,14 @@ ul {
     flex-wrap: wrap;
 }
 
+.logo {
+
+    height: 100%;
+    left: 10px;
+    width: 150px;
+    height: auto;
+}
+
 .logo a {
     font-family: 'Montserrat', sans-serif;
     font-size: 28px;
@@ -204,7 +213,7 @@ ul {
     padding: 10px 0;
     top: calc(100% + 5px);
     /* Position below the parent link */
-    left: 0;
+    left: 10;
     /* Align with parent link */
 }
 
@@ -235,14 +244,19 @@ ul {
 
 /* --- Hero Section --- */
 .hero-section {
-    background: linear-gradient(rgba(10, 15, 61, 0.8), rgba(10, 15, 61, 0.8)), url('https://via.placeholder.com/1600x600/0a0f3d/00e0ff?text=IT+Solutions+Background') no-repeat center center/cover;
-    color: var(--light-text);
-    text-align: center;
+    background-image: url(/images/office.jpg);
+
+    color: var(--accent-color) text-align: center;
     padding: 120px 0;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 500px;
+    background-attachment: ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .hero-section h2 {
@@ -250,7 +264,8 @@ ul {
     font-size: 3.5rem;
     margin-bottom: 20px;
     line-height: 1.2;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 4px rgba(80, 207, 63, 0.3);
+    color: var(--accent-color);
 }
 
 .hero-section p {
@@ -259,11 +274,15 @@ ul {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+    color: white;
 }
 
 .hero-section .btn {
     font-size: 1.1rem;
     padding: 15px 35px;
+
+
 }
 
 /* --- Section Headings --- */
@@ -290,6 +309,10 @@ h2::after {
 }
 
 /* --- About Section --- */
+.about-container{
+    background-color: darkolivegreen;
+}
+
 .about-section .about-content {
     background-color: var(--card-bg);
     padding: 40px;
@@ -470,7 +493,7 @@ h2::after {
 .main-form .btn {
     width: auto;
     margin-right: 15px;
-    }
+}
 
 
 .main-form .btn:last-child {
@@ -478,14 +501,14 @@ h2::after {
 }
 
 /* .sign-up section */
-.card-container{
+.card-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 100px;
 }
 
-.card{
+.card {
     width: 325px;
     background-color: #e0e0e0;
     border-radius: 8px;
@@ -494,41 +517,43 @@ h2::after {
     margin: 20px;
 }
 
-.card-content{
+.card-content {
     padding: 16px;
 }
 
-.card-content p{
+.card-content p {
     color: #555;
     font-size: 15px;
     line-height: 1.3;
 }
 
-.card-content .btn{
-display: inline-block;
-padding: 8px 16px;
-background-color: #333;
-text-decoration: none;
-border-radius: 4px;
-margin-top: 16px;
-color: #ffffff;
+.card-content .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    color: #ffffff;
 }
 
 
-.SignUp-grid{
+.SignUp-grid {
     display: grid;
     grid-template-columns: auto;
     align-items: center;
     align-content: center;
 }
-.signUp-box{
+
+.signUp-box {
     width: 360px;
     height: 620px;
     margin: auto;
     background-color: white;
     border-radius: 3px;
-    
+
 }
+
 sign-up form {
     background: var(--card-bg);
     position: absolute;
@@ -539,19 +564,19 @@ sign-up form {
 
 }
 
-.sign-up form h1{
+.sign-up form h1 {
     font-size: 40px;
     text-align: center;
     text-transform: uppercase;
     margin: 40px 0;
 }
 
-.sign-up form p{
+.sign-up form p {
     font-size: 20px;
     margin: 15px 0;
 }
 
-.sign-up form input{
+.sign-up form input {
     font-size: 16px;
     padding: 2% 0px;
     width: 100%;
@@ -560,16 +585,16 @@ sign-up form {
     outline: none;
 }
 
-.sign-up form button{
+.sign-up form button {
     font-size: 18px;
     font-weight: bold;
     margin: 20px 0;
     padding: 10px 15px;
     width: 50%;
-    border-radius:5px;
+    border-radius: 5px;
 }
 
-.sign-up form button hover{
+.sign-up form button hover {
     color: black;
 }
 
@@ -608,8 +633,7 @@ sign-up form {
 .social-links .social-icon {
     display: inline-grid;
     background-color: whitesmoke;
-    color: var(--light-text)
-    padding: 1em;
+    color: var(--light-text) padding: 1em;
     border-radius: 50%;
     height: 64px;
     width: 64px;
@@ -617,11 +641,11 @@ sign-up form {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.social-links a svg{
+.social-links a svg {
     height: 32px;
 }
 
-.social-links a::before{
+.social-links a::before {
     content: attr(data-social);
     position: absolute;
     background-color: var(--accent-color);
@@ -632,18 +656,19 @@ sign-up form {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
     transform: translateY(-30px) rotate(25deg);
     opacity: 0;
-    transition: 200ms cubic-bezier(.42,0,.44,1.68);
+    transition: 200ms cubic-bezier(.42, 0, .44, 1.68);
 }
 
-.Socia-links a:hover{
+.Socia-links a:hover {
     background-color: var(--accent-color);
     fill: white;
 }
 
-.Socia-links a:hover{
+.Socia-links a:hover {
     fill: white;
 }
-.Socia-links a::after{
+
+.Socia-links a::after {
     content: '';
     position: absolute;
     height: 0;
@@ -653,22 +678,22 @@ sign-up form {
     border-top: 10px solid var(--accent-color);
     transform: translateY(0) rotate(25deg);
     opacity: 0;
-    transition: 200ms cubic-bezier(.42,0,.44,1.68);
+    transition: 200ms cubic-bezier(.42, 0, .44, 1.68);
 }
 
-.social-links a:hover::before{
+.social-links a:hover::before {
     transform: translateY(-65px) rotate(0);
     opacity: 1;
 }
 
-.Socia-links img{
+.Socia-links img {
     width: 30px;
     height: 10px;
     margin: 0 px;
     transition: transform 0.3s;
 }
 
-.Social-icons img: hover{
+.Social-icons img: hover {
     transform: scale(1.1);
 }
 
