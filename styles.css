@@ -25,7 +25,7 @@
 }
 
 body {
-    background-image: url(office.jpg);
+
     font-family: 'Roboto', sans-serif;
     background: var(--light-bg);
     color: var(--dark-text);
@@ -308,14 +308,40 @@ h2::after {
     border-radius: 2px;
 }
 
-/* --- About Section --- */
-.about-container{
-    background-color: darkolivegreen;
+.about us-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: red;
+    align-items:;
+    column-gap: 30px;
 }
 
+.content{
+    background-image: url(/images/small\ setup.jpg);
+    text-align: center;
+    background-color: #6c757d;
+    color: whitesmoke;
+    padding: 250px;
+}
+
+.background img{
+    background-size: cover;
+   
+}
+
+.card-content{
+    padding: 10px;
+    margin: 20px 50px;
+}
+
+.card-content{
+    font-size: ;
+    margin-bottom: 8px;
+}
+
+/* --- About Section --- */
 .about-section .about-content {
-    background-color: var(--card-bg);
-    padding: 40px;
+     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 10px 30px var(--shadow-light);
     margin: 0 auto;
@@ -326,6 +352,7 @@ h2::after {
     font-size: 1.1rem;
     margin-bottom: 15px;
     color: #444;
+    text-align: center;
 }
 
 .about-section p:last-child {
