@@ -45,13 +45,13 @@
             scroll-behavior: smooth;
         }
 
-        .logo{
-    
-    height: 100%;
-    left: 10px;
-    width: 150px;
-    height:;
-}
+        .logo {
+
+            height: 100%;
+            left: 10px;
+            width: 150px;
+            height: ;
+        }
 
         a {
             color: var(--secondary-color);
@@ -330,7 +330,7 @@
 
         /* --- Services Section --- */
         .services-section {
-            background-color: var(--light-bg);
+            background-color: whitesmoke;
             /* Ensure consistent background */
         }
 
@@ -543,23 +543,6 @@
             text-decoration: none;
         }
 
-        .google-map {
-            margin-top: 40px;
-            border-radius: 12px;
-            overflow: hidden;
-            /* Ensures iframe corners are rounded */
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .google-map iframe {
-            width: 100%;
-            display: block;
-            /* Remove extra space below iframe */
-        }
-
         /* --- Footer --- */
         .main-footer {
             background-color: var(--primary-color);
@@ -656,6 +639,11 @@
                 grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             }
 
+            .service-card img {
+                height: 80%;
+                width: 200px;
+            }
+
             .product-card img {
                 height: 150px;
             }
@@ -669,6 +657,63 @@
                 font-size: 0.9rem;
                 padding: 8px 15px;
             }
+        }
+
+        .service-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px var(--shadow-light);
+    border-left: 6px solid var(--secondary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.service-card img{
+    height: 80%;
+    width: 200px;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 224, 255, 0.2);
+}
+
+.service-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+
+        /* --- Footer --- */
+        .main-footer {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+
+        .main-footer p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            background-color: var(--primary-color);
+        }
+
+        .main-footer h3 {
+            padding: 10px;
+        }
+
+        .copyright {
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            background-color: var(--primary-color);
+            padding: 10px;
         }
 
         @media (max-width: 480px) {
@@ -700,20 +745,16 @@
 <body>
     <header class="main-header">
         <div class="container">
-            <img src="/images/nexcloud.jpg" class="logo">
+            <img src="/images/cloud-removebg-preview (1).png" class="logo">
             <nav class="main-nav">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li>
-                        <a href="about.html" class="dropdown-toggle">About Us</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="about.html#our-vision">Our Vision</a></li>
-                            <li><a href="about.html#our-mission">Our Mission</a></li>
-                        </ul>
+                        <a href="about.html">About Us</a>
                     </li>
                     <li><a href="services.html">Our Services</a></li>
-                    <li><a href="index.html#why-choose-us">Why Choose Us</a></li>
-                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="SignUpForm.html">Sign Up</a></li>
+                    <li><a href="products">Products</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
@@ -721,47 +762,43 @@
     </header>
 
     <main>
-        <section id="services" class="services-section section-padding">
+        <section id="services" class="services section-padding">
             <div class="container">
                 <h2>Our Services</h2>
                 <div class="service-grid">
                     <article class="service-card">
+                        <img src="/images/Repair.jpg">
                         <h3>Computer Sales & Repairs</h3>
-                        <p>High-quality desktops, laptops, accessories, and expert repair services for all major brands.
-                            We diagnose and fix hardware and software issues efficiently to get you back up and running.
-                        </p>
                     </article>
+
                     <article class="service-card">
+                        <img src="/images/electronic supply.jpg">
                         <h3>Electronic Supply</h3>
-                        <p>A wide range of electronic devices including high-performance printers, reliable routers, the
-                            latest mobile gadgets, and smart home devices. We source only the best quality products for
-                            our clients.</p>
                     </article>
+
                     <article class="service-card">
+                        <img src="/images/networking.jpg">
                         <h3>Networking Solutions</h3>
-                        <p>Professional setup, configuration, and maintenance of Local Area Networks (LAN) and Wide Area
-                            Networks (WAN) for both homes and businesses. Ensure seamless connectivity and secure data
-                            transfer.</p>
                     </article>
+
                     <article class="service-card">
+                        <img src="/images/software installation.jpg">
                         <h3>Software Installation & Support</h3>
-                        <p>Comprehensive installation, licensing, and ongoing technical support for operating systems
-                            (Windows, macOS, Linux), essential antivirus software, and productivity suites like
-                            Microsoft Office and Adobe Creative Cloud.</p>
                     </article>
+
                     <article class="service-card">
+                        <img src="/images/consultancy.jpg">
                         <h3>IT Consultancy</h3>
-                        <p>Customized IT support and strategic advice for businesses and organizations of all sizes.
-                            From infrastructure planning to cybersecurity audits, we help optimize your technology for
-                            maximum efficiency and growth.</p>
+
                     </article>
+
                     <article class="service-card">
+                        <img src="/images/data recovery.jpg">
                         <h3>Data Recovery & Backup</h3>
-                        <p>Lost data? We offer professional data recovery services for hard drives, SSDs, and other
-                            storage devices. We also set up robust backup solutions to protect your valuable information
-                            from future loss.</p>
+
                     </article>
                 </div>
+
 
 
                 <div class="social-links">
@@ -771,9 +808,30 @@
         </section>
     </main>
 
-    <footer class="main-footer">
-        <div class="container">
-            <p>© 2025 NEXCLOUD SERVICES. All rights reserved.</p>
+    <footer>
+        <div class="main-footer">
+            <div class="footer-content">
+                <h3>Our Location</h3>
+                <h4><b>Nexcloud Services</b></h4>
+                <p>Kooki-Towers, Buganda road, Shop No: L123</p>
+                <p>Kampala-Uganda</p>
+            </div>
+
+            <div class="footer-content">
+                <h3>Quick Contacts</h3>
+                <p><b>Tel:</b> 0770987258</p>
+                <p><b>Email:</b> nexcloud@gmail.com</p>
+            </div>
+
+            <div class="footer-content">
+                <h3>Working Hours</h3>
+                <p><b>Mon-Sat:</b> 8:30PM - 6:00PM</p>
+                <p><b>Sun:</b> Closed</p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 NEXCLOUD SERVICES. All rights reserved.</p>
         </div>
     </footer>
 </body>

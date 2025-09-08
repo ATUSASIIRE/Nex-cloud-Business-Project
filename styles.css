@@ -25,9 +25,8 @@
 }
 
 body {
-
     font-family: 'Roboto', sans-serif;
-    background: var(--light-bg);
+
     color: var(--dark-text);
     line-height: 1.6;
     scroll-behavior: smooth;
@@ -48,11 +47,7 @@ ul {
     list-style: none;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+
 
 .section-padding {
     padding: 80px 0;
@@ -114,7 +109,7 @@ ul {
 .main-header {
     background-color: var(--primary-color);
     color: var(--light-text);
-    padding: 20px 0;
+    padding: 1px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     position: sticky;
     top: 0;
@@ -290,10 +285,11 @@ h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
     color: var(--primary-color);
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     text-align: center;
     position: relative;
     padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 h2::after {
@@ -308,63 +304,71 @@ h2::after {
     border-radius: 2px;
 }
 
-.about us-container{
+/* About us section */
+
+.about-us-container {
+    background-color: var(--light-bg);
+    padding: 0 20px;
+    padding-bottom: 70px;
+
+}
+
+.container-grid {
     display: grid;
     grid-template-columns: auto auto;
-    background-color: red;
-    align-items:;
-    column-gap: 30px;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
 }
 
-.content{
-    background-image: url(/images/small\ setup.jpg);
+.about-us-card {
+    border-radius: 10px;
+    padding: 20px;
     text-align: center;
-    background-color: #6c757d;
-    color: whitesmoke;
-    padding: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.background img{
-    background-size: cover;
-   
-}
-
-.card-content{
-    padding: 10px;
-    margin: 20px 50px;
-}
-
-.card-content{
-    font-size: ;
-    margin-bottom: 8px;
-}
-
-/* --- About Section --- */
-.about-section .about-content {
-     padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px var(--shadow-light);
-    margin: 0 auto;
-    max-width: 900px;
-}
-
-.about-section p {
-    font-size: 1.1rem;
+.about-us-card img {
+    max-width: 100%;
+    height: 400px;
+    /* Fixed height for consistent card size */
+    object-fit: contain;
+    /* Ensures the image fits without cropping */
+    border-radius: 8px;
     margin-bottom: 15px;
-    color: #444;
-    text-align: center;
+
 }
 
-.about-section p:last-child {
-    margin-bottom: 0;
+.about-us-content h3 {
+    font-size: 20px;
+    padding-top: 20px;
 }
+
+.about-us-content p {
+    font-size: 18px;
+}
+
+
 
 
 /* --- Services Section --- */
+.service-container {
+    background-color: var(--light-bg);
+    padding: 0 80px;
+    margin: 0 auto;
+    min-height: 100px;
+    padding-bottom: 80px;
+
+}
+
 .service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
+    padding: 30px;
 }
 
 .service-card {
@@ -377,6 +381,11 @@ h2::after {
     text-align: center;
 }
 
+.service-card img {
+    height: 80%;
+    width: 200px;
+}
+
 .service-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 35px rgba(0, 224, 255, 0.2);
@@ -384,7 +393,7 @@ h2::after {
 
 .service-card h3 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
+    font-size: 20px;
     color: var(--primary-color);
     margin-bottom: 15px;
 }
@@ -394,11 +403,13 @@ h2::after {
 }
 
 /* --- Why Choose Us / Benefits Section --- */
+
 .benefits-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 25px;
+    gap: 35px;
+    margin-top: 50px;
 }
 
 .benefit-card {
@@ -411,6 +422,7 @@ h2::after {
     box-shadow: 0 8px 16px var(--shadow-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     text-align: center;
+
 }
 
 .benefit-card:hover {
@@ -427,10 +439,21 @@ h2::after {
 
 
 /* --- Products Section --- */
-.product-grid {
+.products-container {
+    background-color: var(--light-bg);
+    padding-bottom: 70px;
+
+}
+
+.container-grid {
+    background-color: var(--light-bg);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
+    margin: 20px;
+
+
+
 }
 
 .product-card {
@@ -527,7 +550,26 @@ h2::after {
     margin-right: 0;
 }
 
+.place-an-order-container {
+    background-color: var(--light-bg);
+    padding-bottom: 80px;
+}
+
+.place-an-order-grid {
+    margin: 50px;
+}
+
+.place-an-order-card {
+    background-color: var(--card-bg);
+
+}
+
 /* .sign-up section */
+.sign-up-container {
+    background-color: var(--light-bg);
+    padding-bottom: 70px;
+}
+
 .card-container {
     display: flex;
     justify-content: center;
@@ -537,7 +579,7 @@ h2::after {
 
 .card {
     width: 325px;
-    background-color: #e0e0e0;
+    background-color: #a73535;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
@@ -582,7 +624,7 @@ h2::after {
 }
 
 sign-up form {
-    background: var(--card-bg);
+    background: var(--light-bg);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -725,18 +767,34 @@ sign-up form {
 }
 
 
-/* --- Footer --- */
+/* /* --- Footer ---  */
+
 .main-footer {
     background-color: var(--primary-color);
     color: var(--light-text);
     text-align: center;
     padding: 30px 0;
     margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 
 .main-footer p {
     font-size: 0.95rem;
     opacity: 0.9;
+    background-color: var(--primary-color);
+}
+
+.main-footer h3 {
+    padding: 10px;
+}
+
+.copyright {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 10px;
 }
 
 
