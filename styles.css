@@ -239,7 +239,7 @@ ul {
 
 /* --- Hero Section --- */
 .hero-section {
-    background-image: url(/images/office.jpg);
+    background-image: url(./images/office.jpg);
 
     color: var(--accent-color) text-align: center;
     padding: 120px 0;
