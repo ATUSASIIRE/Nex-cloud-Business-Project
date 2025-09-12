@@ -289,7 +289,7 @@ h2 {
     text-align: center;
     position: relative;
     padding-bottom: 10px;
-    padding-top: 30px;
+    padding-top: 50px;
 }
 
 h2::after {
@@ -310,8 +310,8 @@ h2::after {
     background-color: var(--light-bg);
     padding: 0 20px;
     padding-bottom: 70px;
-   
-    
+
+
 
 }
 
