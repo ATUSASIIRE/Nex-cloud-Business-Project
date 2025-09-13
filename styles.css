@@ -146,13 +146,26 @@ ul {
 }
 
 
+/* Hamburger button styling */
 .nav-toggle {
   display: none;
-  font-size: 26px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0;
 }
+
+.nav-toggle .bar {
+  height: 4px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 2px;
+}
+
 
 
 
@@ -916,14 +929,12 @@ sign-up form {
         font-size: 24px;
     }
 
-  /* Responsive for small screens */
+ /* Show hamburger only on small screens */
 @media (max-width: 768px) {
-  /* Show hamburger */
   .nav-toggle {
-    display: block;
+    display: flex;
   }
 
-  /* Hide nav links initially */
   .main-nav {
     display: none;
     flex-direction: column;
@@ -933,10 +944,16 @@ sign-up form {
     padding: 10px 0;
   }
 
-  /* Show nav when toggled */
   .main-nav.show {
     display: flex;
   }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
 
   .nav-links {
     flex-direction: column;
