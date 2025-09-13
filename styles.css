@@ -150,10 +150,11 @@ ul {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 30px;
-  height: 22px;
-  background: none;
+  width: 40px;
+  height: 30px;
+  background: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
   padding: 0;
   z-index: 1000;
@@ -842,22 +843,32 @@ sign-up form {
 
   /* Hide nav by default */
   .main-nav {
-    display: none;
+    max-height: 0px;
+    overflow: hidden;
     flex-direction: column;
     align-items: center;
     background: #f8f8f8;
     width: 100%;
     padding: 15px 0;
+    transition: max-height 0.3s ease-out;
   }
 
   /* Show when toggled */
   .main-nav.show {
     display: flex;
+     transition: max-height 0.3s ease-in;
   }
 
   .nav-links {
     flex-direction: column;
     gap: 15px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links li a{
+    display: block;
+    padding: 10px 0;
   }
 }
 
