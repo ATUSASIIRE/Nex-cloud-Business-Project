@@ -145,31 +145,6 @@ ul {
     color: var(--secondary-color);
 }
 
-
-/* Hamburger button styling */
-.nav-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 22px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-}
-
-.nav-toggle .bar {
-    height: 4px;
-    width: 100%;
-    background-color: #333;
-    border-radius: 2px;
-}
-
-
-
-
-
 .main-nav .nav-links {
     display: flex;
     gap: 30px;
