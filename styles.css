@@ -144,6 +144,19 @@ ul {
 .logo a:hover {
     color: var(--secondary-color);
 }
+
+
+.nav-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
 .main-nav .nav-links {
     display: flex;
     gap: 30px;
@@ -902,6 +915,10 @@ sign-up form {
     .logo a {
         font-size: 24px;
     }
+
+      .nav-toggle {
+    display: block;
+  }
 
     .hero-section h2 {
         font-size: 1.8rem;
