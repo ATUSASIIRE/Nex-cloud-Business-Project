@@ -145,6 +145,27 @@ ul {
     color: var(--secondary-color);
 }
 
+
+
+
+.nav-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+
+
+
+
 .main-nav .nav-links {
     display: flex;
     gap: 30px;
