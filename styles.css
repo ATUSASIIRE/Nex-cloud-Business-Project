@@ -916,9 +916,35 @@ sign-up form {
         font-size: 24px;
     }
 
-      .nav-toggle {
+  /* Responsive for small screens */
+@media (max-width: 768px) {
+  /* Show hamburger */
+  .nav-toggle {
     display: block;
   }
+
+  /* Hide nav links initially */
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #f8f8f8;
+    margin-top: 10px;
+    padding: 10px 0;
+  }
+
+  /* Show nav when toggled */
+  .main-nav.show {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
 
     .hero-section h2 {
         font-size: 1.8rem;
