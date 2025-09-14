@@ -834,8 +834,6 @@ sign-up form {
         gap: 20px;
     }
 
-/* Responsive */
-@media (max-width: 768px) {
   /* Show hamburger */
   .nav-toggle {
     display: flex;
@@ -989,4 +987,6 @@ h2 {
 .product-card img {
     height: 120px;
 }
+
+
 }
