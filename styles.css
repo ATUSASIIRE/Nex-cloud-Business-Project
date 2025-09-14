@@ -262,6 +262,21 @@ ul {
     text-decoration: none;
 }
 
+  /* Hamburger button */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      border-radius: 5px;
+    }
+
 
 /* --- Hero Section --- */
 .hero-section {
@@ -967,44 +982,26 @@ h2 {
     height: 120px;
 }
 
-.menu {
-    flex-direction: column;
 
-}
-.menu .logo {
-    width: 100%;
-}
-.menu .logo label{
-    display: block;
-    cursor: pointer;
-    position: relative;
-    width: 30px;
-    height: 30px;
-}
+/* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #333;
+        flex-direction: column;
+        width: 200px;
+        padding: 20px;
+        display: none;
+      }
 
-.menu .logo label::before{
-    position: absolute;
-    content: menu;
-    font-family: material icons;
-    top: 0;
-    left: 0;
-    font-size: 30px;
-}
-.menu .nav-links{
-    width: 100%;
-    flex-direction: column;
-    max-height: 0;
-    overflow: hidden;
-    transition: 0.25s;
+      .nav-links.show {
+        display: flex;
+      }
 
-}
-.menu .nav-link{
-    width: 100;
-    padding: 15px;
-    border-radius: 0;
-    border-top: 0.5mm solid rgb(52, 53, 71);
-}
-.menu:checked ~ .nav-links{
-    max-height: 500px;
-}
+      .hamburger {
+        display: flex;
+      }
+    }
 }
