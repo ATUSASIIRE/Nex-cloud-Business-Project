@@ -270,21 +270,6 @@ ul {
     text-decoration: none;
 }
 
-  /* Hamburger button */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-    }
-
-    .hamburger span {
-      width: 25px;
-      height: 3px;
-      background: white;
-      border-radius: 5px;
-    }
-
 
 /* --- Hero Section --- */
 .hero-section {
@@ -990,72 +975,8 @@ h2 {
     height: 120px;
 }
 
- /* Responsive styles */
-    @media (max-width: 768px) {
-      .nav-links {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background: #333;
-        flex-direction: column;
-        width: 220px;
-        padding: 20px;
-        display: none;
-      }
 
-      /* Show when checkbox checked */
-      #menu-toggle:checked ~ .nav-links {
-        display: flex;
-      }
+ 
 
-      .menu-btn {
-        display: flex;
-      }
-    }
 
-      /* MOBILE STYLES */
-  @media (max-width: 768px) {
-    .main-nav {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: #333;
-      overflow: hidden;
-      max-height: 0;                /* collapsed by default */
-      transition: max-height .35s ease;
-    }
-
-    .nav-links {
-      flex-direction: column;
-      gap: 12px;
-      padding: 14px 18px;
-    }
-
-    /* show hamburger on small screens */
-    .menu-btn { display: flex; }
-
-    /* Toggle: when checkbox is checked, expand nav */
-    .menu-toggle:checked ~ .main-nav {
-      max-height: 600px; /* large enough for menu content */
-    }
- /* Animate hamburger -> X */
-    /* note: checkbox and label are siblings so we use general sibling (~) */
-    .menu-toggle:checked ~ .menu-btn span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-    .menu-toggle:checked ~ .menu-btn span:nth-child(2) {
-      opacity: 0;
-      transform: translateX(-6px);
-    }
-    .menu-toggle:checked ~ .menu-btn span:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    /* Keep standard desktop layout hidden inside nav until toggled */
-    .main-nav { display:block; }
-  }
-
-  /* Optional: small visual polish when hovering links */
-  .nav-links a:hover { opacity:.85; }
 }
