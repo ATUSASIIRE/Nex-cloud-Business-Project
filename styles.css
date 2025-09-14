@@ -97,6 +97,53 @@ body {
     background: #5a6268;
 }
 
+@media screen and (amx-width: 650px) {
+    .menu{
+        flex-direction: column;
+    }
+
+    .menu .logo{
+        width: 100px;
+    }
+
+    .menu .logo label{
+        display: block;
+        cursor: pointer;
+        position: relative;
+        width: 30px;
+        height: 30px;
+    }
+
+    .menu .logo label::before{
+        position: absolute;
+        content: menu;
+        font-family: 'Roboto', sans-serif;
+        top: 0;
+        left: 0;
+        font-size: 30px;
+    }
+
+   .menu.items{
+flex-direction: column;
+max-height: 0;
+overflow: hidden;
+transition: 0.25s;
+    }
+
+    .menu .item{
+        width: 100%;
+        padding: 15px;
+        border-radius: 0;
+        border-top: 0.5mm solid rgb(52, 53, 71);
+    }
+
+    .menu:checked ~.itmes{
+        max-height: 500px;
+    }
+
+    
+}
+
 
 
 
