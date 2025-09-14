@@ -1039,5 +1039,23 @@ h2 {
     .menu-toggle:checked ~ .main-nav {
       max-height: 600px; /* large enough for menu content */
     }
+ /* Animate hamburger -> X */
+    /* note: checkbox and label are siblings so we use general sibling (~) */
+    .menu-toggle:checked ~ .menu-btn span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .menu-toggle:checked ~ .menu-btn span:nth-child(2) {
+      opacity: 0;
+      transform: translateX(-6px);
+    }
+    .menu-toggle:checked ~ .menu-btn span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
 
+    /* Keep standard desktop layout hidden inside nav until toggled */
+    .main-nav { display:block; }
+  }
+
+  /* Optional: small visual polish when hovering links */
+  .nav-links a:hover { opacity:.85; }
 }
