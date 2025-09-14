@@ -834,27 +834,6 @@ sign-up form {
         gap: 20px;
     }
 
-  /* Show hamburger
-  .nav-toggle {
-    display: flex;
-  }
-
-  /* Hide nav by default */
-  .main-nav {
-    max-height: 0px;
-    overflow: scroll;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 15px 0;
-    transition: max-height 0.3s ease-out;
-  }
-
-  /* Show when toggled */
-  .main-nav.show {
-    display: flex;
-     transition: max-height 0.3s ease-in;
-  } */
 
   .nav-links {
     flex-direction: column;
