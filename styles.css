@@ -145,27 +145,28 @@ ul {
     color: var(--secondary-color);
 }
 
-/* Hamburger button */
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 40px;
-  height: 30px;
-  background: rgb(36, 31, 31);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 0;
-  z-index: 1000;
-}
+    /* Hide checkbox */
+    #menu-toggle {
+      display: none;
+    }
 
-.nav-toggle .bar {
-  height: 4px;
-  width: 100%;
-  background-color: white;
-  border-radius: 2px;
-}
+    /* Hamburger button */
+    .menu-btn {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 22px;
+      cursor: pointer;
+    }
+
+    .menu-btn span {
+      height: 3px;
+      width: 100%;
+      background: white;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
 
 
 
@@ -982,8 +983,7 @@ h2 {
     height: 120px;
 }
 
-
-/* Responsive */
+ /* Responsive styles */
     @media (max-width: 768px) {
       .nav-links {
         position: absolute;
@@ -991,17 +991,29 @@ h2 {
         right: 0;
         background: #333;
         flex-direction: column;
-        width: 200px;
+        width: 220px;
         padding: 20px;
         display: none;
       }
 
-      .nav-links.show {
+      /* Show when checkbox checked */
+      #menu-toggle:checked ~ .nav-links {
         display: flex;
       }
 
-      .hamburger {
+      .menu-btn {
         display: flex;
+      }
+
+      /* Animate to X */
+      #menu-toggle:checked + .menu-btn span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      #menu-toggle:checked + .menu-btn span:nth-child(2) {
+        opacity: 0;
+      }
+      #menu-toggle:checked + .menu-btn span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
       }
     }
 }
