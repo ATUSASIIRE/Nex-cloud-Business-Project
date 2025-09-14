@@ -1016,12 +1016,16 @@ h2 {
     flex-direction: column;
     max-height: 0;
     overflow: hidden;
+    transition: 0.25s;
 
 }
 .menu .nav-link{
     width: 100;
     padding: 15px;
     border-radius: 0;
-    border-top: ;
+    border-top: 0.5mm solid rgb(52, 53, 71);
+}
+.menu:checked ~ .nav-links{
+    max-height: 500px;
 }
 }
