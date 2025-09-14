@@ -834,7 +834,7 @@ sign-up form {
         gap: 20px;
     }
 
-  /* Show hamburger */
+  /* Show hamburger
   .nav-toggle {
     display: flex;
   }
@@ -854,7 +854,7 @@ sign-up form {
   .main-nav.show {
     display: flex;
      transition: max-height 0.3s ease-in;
-  }
+  } */
 
   .nav-links {
     flex-direction: column;
@@ -988,5 +988,40 @@ h2 {
     height: 120px;
 }
 
+.menu {
+    flex-direction: column;
 
+}
+.menu .logo {
+    width: 100%;
+}
+.menu .logo label{
+    display: block;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.menu .logo label::before{
+    position: absolute;
+    content: menu;
+    font-family: material icons;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+}
+.menu .nav-links{
+    width: 100%;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+
+}
+.menu .nav-link{
+    width: 100;
+    padding: 15px;
+    border-radius: 0;
+    border-top: ;
+}
 }
