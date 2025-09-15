@@ -274,6 +274,14 @@ ul {
     text-decoration: none;
 }
 
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    
+}
+
 
 /* --- Hero Section --- */
 .hero-section {
